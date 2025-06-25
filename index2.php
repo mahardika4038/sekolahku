@@ -8,6 +8,10 @@
         <meta content="" name="keywords">
         <meta content="" name="description">
 
+         <!-- Favicons -->
+  <link href="img/galery/LOGO_CB-removebg-preview.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +80,6 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <?php
-                    session_start();
 
                     if (!isset($_SESSION['user_id'])) {
                         // Belum login → Home ke index.html
