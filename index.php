@@ -66,4 +66,6 @@ Di sinilah kamu akan dibimbing oleh tenaga pendidik profesional dan terhubung la
                 </div>
             </div>
             <!-- Carousel End -->
+
+
 <?php include("./layout/footer.php") ?>
