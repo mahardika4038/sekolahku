@@ -105,22 +105,22 @@ if (!isset($_SESSION['user_id'])) {
                         ?>
                         <a href="<?= $home_link ?>" class="nav-item nav-link">Home</a>
                         
-                         <a href="services.html" class="nav-item nav-link">fasilitas</a>
-                        <a href="campus.html" class="nav-item nav-link">kampus</a>
-                        <a href="extra.html" class="nav-item nav-link">extrakulikuler</a>
+                         <a href="services.php" class="nav-item nav-link">fasilitas</a>
+                        <a href="campus.php" class="nav-item nav-link">kampus</a>
+                        <a href="extra.php" class="nav-item nav-link">extrakulikuler</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">explore</a>
                             <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">perusahaan</a>
-                                <a href="tour.html" class="dropdown-item">jurusan</a>
-                                <a href="gallery.html" class="dropdown-item">penunjang</a>
+                                <a href="destination.php" class="dropdown-item">perusahaan</a>
+                                <a href="tour.php" class="dropdown-item">jurusan</a>
+                                <a href="gallery.php" class="dropdown-item">penunjang</a>
                                 <a href="guides.php" class="dropdown-item active">teacher</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                                
-                                <a href="04.html" class="dropdown-item">404 Page</a>
+                                <a href="04.php" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="login/login.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">PPDB NOW</a>
                 </div>
