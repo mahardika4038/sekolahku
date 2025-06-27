@@ -89,9 +89,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a href="<?= $home_link ?>" class="nav-item nav-link <?php if ($current_page == 'index.php' || $current_page == 'index2.php') echo 'active'; ?>">Home</a>
                     
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['destination.php', 'tour.php', 'gallery.php', 'guides.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
+                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./ppdb/pengumuman.php', 'tour.php', 'gallery.php', 'guides.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
                         <div class="dropdown-menu m-0">
-                            <a href="destination.php" class="dropdown-item <?php if ($current_page == 'destination.php') echo 'active'; ?>">Perusahaan</a>
+                            <a href="./ppdb/pengumuman.php" class="dropdown-item <?php if ($current_page == './ppdb/pengumuman.php') echo 'active'; ?>">Pengumuman</a>
                             <a href="tour.php" class="dropdown-item <?php if ($current_page == 'tour.php') echo 'active'; ?>">Jurusan</a>
                             <a href="gallery.php" class="dropdown-item <?php if ($current_page == 'gallery.php') echo 'active'; ?>">Penunjang</a>
                             <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
