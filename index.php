@@ -33,7 +33,7 @@
                                                         Mau langsung kerja, kuliah, atau buka usaha sendiri? Semua bisa kamu mulai dari sini.
                                     </p>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="index2.php">login trial now</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="index2.php">More</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
 Di sinilah kamu akan dibimbing oleh tenaga pendidik profesional dan terhubung langsung dengan dunia kerja. 
                                     </p>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="login/login.php">login now</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="login/login.php">More</a>
                                     </div>
                                 </div>
                             </div>

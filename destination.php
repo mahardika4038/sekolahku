@@ -1,18 +1,16 @@
 <?php include("./layout/header.php") ?>
-
-        <!-- Header Start -->
+<!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h3 class="text-white display-3 mb-4">SMK CANDA BHIRAWA PARE</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
                     <li class="breadcrumb-item active text-white">Destination</li>
                 </ol>    
             </div>
         </div>
         <!-- Header End -->
-
         <!-- Destination Start -->
         <div class="container-fluid destination py-5">
             <div class="container py-5">
