@@ -46,7 +46,7 @@
                     <div class="col-lg-8">
                         <h3 class="mb-2">Kirim Pesan kepada Kami</h3>
                         <p class="mb-4">Silakan isi formulir di bawah ini untuk menghubungi pihak sekolah. Tim kami akan merespons secepat mungkin pada jam kerja.
-                                        Jika formulir tidak aktif, silakan hubungi melalui kontak resmi sekolah atau kunjungi langsung ke alamat yang tersedia. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                                        Jika formulir tidak aktif, silakan hubungi melalui kontak resmi sekolah atau kunjungi langsung ke alamat yang tersedia.
                         <form action="send-email.php" method="post">
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -79,13 +79,7 @@
                                 </div>
                                 </form>
 
-                    <div class="col-12">
-                        <div class="rounded">
-                            <iframe class="rounded w-100" 
-                            style="height: 450px;" src="https://maps.app.goo.gl/JTARxmTKnQRCtNLP6?g_st=ic" 
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

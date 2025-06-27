@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -7,121 +6,122 @@ if (!isset($_SESSION['user_id'])) {
 } else {
     $home_link = "index2.php";
 }
+
+$current_page = basename($_SERVER['PHP_SELF']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-       <title>SMK Canda Bhirawa - VOCATIONAL HIGH SCHOOL</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>SMK Canda Bhirawa - VOCATIONAL HIGH SCHOOL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-         <!-- Favicons -->
-  <link href="img/galery/LOGO_CB-removebg-preview.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="img/galery/LOGO_CB-removebg-preview.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nav-link.active {
+            background-color: #0d6efd;
+            color: #fff !important;
+            border-radius: 8px; /* <-- Tambahkan baris ini */
+        }
+    </style>
+</head>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <!-- Spinner Start 
-         <div>
-        <id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-         </di>-->
-        <!-- Spinner End -->
-
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
-            <div class="row gx-0">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                   <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.youtube.com/channel/UCFKw9fQO678f5yCYIkDH0UA"><i class="fab fa-youtube fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/groups/smkcbpare/?locale=id_ID"><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/smkcandabhirawa/"><i class="fab fa-instagram fw-normal"></i></a>
-                        
-                    </div>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.youtube.com/channel/UCFKw9fQO678f5yCYIkDH0UA"><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/groups/smkcbpare/?locale=id_ID"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/smkcandabhirawa/"><i class="fab fa-instagram fw-normal"></i></a>
                 </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="registration-form/regis.php"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="login/login.php"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                        
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="registration-form/regis.php"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
+                    <a href="login/login.php"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+    </div>
+    <!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0">
-                        <img src="img/cb/logocb.png" alt="Travela Logo" style="height: 60px; width: auto; margin-right: 10px;">
-                    SMK Canda Bhirawa</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <?php
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="<?= $home_link ?>" class="navbar-brand p-0">
+                <h1 class="m-0">
+                    <img src="img/cb/logocb.png" alt="Travela Logo" style="height: 60px; width: auto; margin-right: 10px;">
+                    SMK Canda Bhirawa
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="<?= $home_link ?>" class="nav-item nav-link <?php if ($current_page == 'index.php' || $current_page == 'index2.php') echo 'active'; ?>">Home</a>
                     
-                        if (!isset($_SESSION['user_id'])) {
-                            // Belum login → Home ke index.html
-                            $home_link = "index.php"; // atau tetap "index.html" kalau tetap pakai yang statis
-                        } else {
-                            // Sudah login → Home ke index2.php
-                            $home_link = "index2.php";
-                        }
-                        ?>
-                        <a href="<?= $home_link ?>" class="nav-item nav-link">Home</a>
-                        
-                         <a href="services.php" class="nav-item nav-link">fasilitas</a>
-                        <a href="campus.php" class="nav-item nav-link">kampus</a>
-                        <a href="extra.php" class="nav-item nav-link">extrakulikuler</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">explore</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="destination.php" class="dropdown-item">perusahaan</a>
-                                <a href="tour.php" class="dropdown-item">jurusan</a>
-                                <a href="gallery.php" class="dropdown-item">penunjang</a>
-                                <a href="guides.php" class="dropdown-item active">teacher</a>
-                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                               
-                                <a href="04.php" class="dropdown-item">404 Page</a>
-                            </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['destination.php', 'tour.php', 'gallery.php', 'guides.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="destination.php" class="dropdown-item <?php if ($current_page == 'destination.php') echo 'active'; ?>">Perusahaan</a>
+                            <a href="tour.php" class="dropdown-item <?php if ($current_page == 'tour.php') echo 'active'; ?>">Jurusan</a>
+                            <a href="gallery.php" class="dropdown-item <?php if ($current_page == 'gallery.php') echo 'active'; ?>">Penunjang</a>
+                            <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
+                            <a href="testimonial.php" class="dropdown-item <?php if ($current_page == 'testimonial.php') echo 'active'; ?>">Testimonial</a>
+                            <a href="04.php" class="dropdown-item <?php if ($current_page == '04.php') echo 'active'; ?>">404 Page</a>
                         </div>
-                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="login/login.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">PPDB NOW</a>
+
+                    <a href="services.php" class="nav-item nav-link <?php if ($current_page == 'services.php') echo 'active'; ?>">Fasilitas</a>
+                    <a href="campus.php" class="nav-item nav-link <?php if ($current_page == 'campus.php') echo 'active'; ?>">Kampus</a>
+                    <a href="extra.php" class="nav-item nav-link <?php if ($current_page == 'extra.php') echo 'active'; ?>">Extrakulikuler</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['destination.php', 'tour.php', 'gallery.php', 'guides.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">Explore</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="destination.php" class="dropdown-item <?php if ($current_page == 'destination.php') echo 'active'; ?>">Perusahaan</a>
+                            <a href="tour.php" class="dropdown-item <?php if ($current_page == 'tour.php') echo 'active'; ?>">Jurusan</a>
+                            <a href="gallery.php" class="dropdown-item <?php if ($current_page == 'gallery.php') echo 'active'; ?>">Penunjang</a>
+                            <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
+                            <a href="testimonial.php" class="dropdown-item <?php if ($current_page == 'testimonial.php') echo 'active'; ?>">Testimonial</a>
+                            <a href="04.php" class="dropdown-item <?php if ($current_page == '04.php') echo 'active'; ?>">404 Page</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.php" class="nav-item nav-link <?php if ($current_page == 'contact.php') echo 'active'; ?>">Contact</a>
                 </div>
-            </nav>
+                <a href="login/login.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">PPDB NOW</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Konten halaman lain di sini -->
