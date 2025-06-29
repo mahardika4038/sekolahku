@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Semua field harus diisi!";
     }
 } else {
-    echo "Invalid request!";
+    echo "";
 }
 
 $koneksi->close();
