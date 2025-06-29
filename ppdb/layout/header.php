@@ -27,6 +27,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -89,14 +90,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a href="<?= $home_link ?>" class="nav-item nav-link <?php if ($current_page == '../index.php' || $current_page == '../index2.php') echo 'active'; ?>">Home</a>
                     
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./pengumuman.php', 'tour.php', 'gallery.php', 'guides.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
+                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./pengumuman.php', 'jadwal.php', 'alur_pendaftaran.php', 'syarat_pendaftaran.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
                         <div class="dropdown-menu m-0">
                             <a href="./pengumuman.php" class="dropdown-item <?php if ($current_page == './pengumuman.php') echo 'active'; ?>">Pengumuman</a>
-                            <a href="tour.php" class="dropdown-item <?php if ($current_page == 'tour.php') echo 'active'; ?>">Jurusan</a>
-                            <a href="gallery.php" class="dropdown-item <?php if ($current_page == 'gallery.php') echo 'active'; ?>">Penunjang</a>
-                            <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
-                            <a href="testimonial.php" class="dropdown-item <?php if ($current_page == 'testimonial.php') echo 'active'; ?>">Testimonial</a>
-                            <a href="04.php" class="dropdown-item <?php if ($current_page == '04.php') echo 'active'; ?>">404 Page</a>
+                            <a href="jadwal.php" class="dropdown-item <?php if ($current_page == 'jadwal.php') echo 'active'; ?>">Jadwal</a>
+                            <a href="alur_pendaftaran.php" class="dropdown-item <?php if ($current_page == 'alur_pendaftaran.php') echo 'active'; ?>">Alur Pendaftaran</a>
+                            <a href="syarat_pendaftaran.php" class="dropdown-item <?php if ($current_page == 'syarat_pendaftaran.php') echo 'active'; ?>">Syarat Pendaftaran</a>
                         </div>
                     </div>
 
