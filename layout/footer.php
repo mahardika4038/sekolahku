@@ -80,8 +80,8 @@ if (isset($_GET['query'])) {
                     <div class="col-md-8 col-lg-8 col-xl-4">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href="/contact.php"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href="visi_misi"><i class="fas fa-angle-right me-2"></i> Visi Misi</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
