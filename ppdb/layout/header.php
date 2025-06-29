@@ -78,9 +78,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="<?= $home_link ?>" class="navbar-brand p-0">
                 <img src="../img/cb/logocb.png" alt="Logo CB" style="height: 60px; width: auto; margin-right: 10px;">
-                <h2 class="m-0 d-none d-lg-inline">
+                <h1 class="m-0 d-none d-lg-inline text-white">
                     SMK Canda Bhirawa
-                </h2>
+                </h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
