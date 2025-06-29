@@ -94,7 +94,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <a href="./ppdb/pengumuman.php" class="dropdown-item <?php if ($current_page == './ppdb/pengumuman.php') echo 'active'; ?>">Pengumuman</a>
                             <a href="./ppdb/jadwal.php" class="dropdown-item <?php if ($current_page == './ppdb/jadwal.php') echo 'active'; ?>">Jadwal</a>
                             <a href="./ppdb/alur_pendaftaran.php" class="dropdown-item <?php if ($current_page == './ppdb/alur_pendaftaran.php') echo 'active'; ?>">Alur Pendaftaran</a>
-                            <a href="./ppdb/" class="dropdown-item <?php if ($current_page == './ppdb/') echo 'active'; ?>">Syarat Pendaftaran</a>
+                            <a href="./ppdb/syarat_pendaftaran.php" class="dropdown-item <?php if ($current_page == './ppdb/syarat_pendaftaran.php') echo 'active'; ?>">Syarat Pendaftaran</a>
                         </div>
                     </div>
 
