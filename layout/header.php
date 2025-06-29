@@ -89,14 +89,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a href="<?= $home_link ?>" class="nav-item nav-link <?php if ($current_page == 'index.php' || $current_page == 'index2.php') echo 'active'; ?>">Home</a>
                     
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./ppdb/pengumuman.php', 'tour.php', 'gallery.php', 'guides.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
+                        <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./ppdb/pengumuman.php', './ppdb/jadwal.php', './ppdb/alur_pendaftaran.php', './ppdb/syarat_pendaftaran.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
                         <div class="dropdown-menu m-0">
                             <a href="./ppdb/pengumuman.php" class="dropdown-item <?php if ($current_page == './ppdb/pengumuman.php') echo 'active'; ?>">Pengumuman</a>
-                            <a href="tour.php" class="dropdown-item <?php if ($current_page == 'tour.php') echo 'active'; ?>">Jurusan</a>
-                            <a href="gallery.php" class="dropdown-item <?php if ($current_page == 'gallery.php') echo 'active'; ?>">Penunjang</a>
-                            <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
-                            <a href="testimonial.php" class="dropdown-item <?php if ($current_page == 'testimonial.php') echo 'active'; ?>">Testimonial</a>
-                            <a href="04.php" class="dropdown-item <?php if ($current_page == '04.php') echo 'active'; ?>">404 Page</a>
+                            <a href="./ppdb/jadwal.php" class="dropdown-item <?php if ($current_page == './ppdb/jadwal.php') echo 'active'; ?>">Jadwal</a>
+                            <a href="./ppdb/alur_pendaftaran.php" class="dropdown-item <?php if ($current_page == './ppdb/alur_pendaftaran.php') echo 'active'; ?>">Alur Pendaftaran</a>
+                            <a href="./ppdb/" class="dropdown-item <?php if ($current_page == './ppdb/') echo 'active'; ?>">Syarat Pendaftaran</a>
                         </div>
                     </div>
 
