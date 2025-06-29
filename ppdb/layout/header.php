@@ -92,7 +92,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./pengumuman.php', 'jadwal.php', 'alur_pendaftaran.php', 'syarat_pendaftaran.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
                         <div class="dropdown-menu m-0">
-                            <a href="./pengumuman.php" class="dropdown-item <?php if ($current_page == './pengumuman.php') echo 'active'; ?>">Pengumuman</a>
+                            <a href="pengumuman.php" class="dropdown-item <?php if ($current_page == './pengumuman.php') echo 'active'; ?>">Pengumuman</a>
                             <a href="jadwal.php" class="dropdown-item <?php if ($current_page == 'jadwal.php') echo 'active'; ?>">Jadwal</a>
                             <a href="alur_pendaftaran.php" class="dropdown-item <?php if ($current_page == 'alur_pendaftaran.php') echo 'active'; ?>">Alur Pendaftaran</a>
                             <a href="syarat_pendaftaran.php" class="dropdown-item <?php if ($current_page == 'syarat_pendaftaran.php') echo 'active'; ?>">Syarat Pendaftaran</a>
@@ -109,9 +109,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <a href="../destination.php" class="dropdown-item <?php if ($current_page == '../destination.php') echo 'active'; ?>">Perusahaan</a>
                             <a href="../tour.php" class="dropdown-item <?php if ($current_page == '../tour.php') echo 'active'; ?>">Jurusan</a>
                             <a href="../gallery.php" class="dropdown-item <?php if ($current_page == '../gallery.php') echo 'active'; ?>">Penunjang</a>
-                            <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
-                            <a href="../testimonial.php" class="dropdown-item <?php if ($current_page == '../testimonial.php') echo 'active'; ?>">Testimonial</a>
-                            <a href="../04.php" class="dropdown-item <?php if ($current_page == '../04.php') echo 'active'; ?>">404 Page</a>
+                            <a href="../guides.php" class="dropdown-item <?php if ($current_page == '../guides.php') echo 'active'; ?>">Teacher</a>
+
                         </div>
                     </div>
                     

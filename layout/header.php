@@ -109,8 +109,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <a href="tour.php" class="dropdown-item <?php if ($current_page == 'tour.php') echo 'active'; ?>">Jurusan</a>
                             <a href="gallery.php" class="dropdown-item <?php if ($current_page == 'gallery.php') echo 'active'; ?>">Penunjang</a>
                             <a href="guides.php" class="dropdown-item <?php if ($current_page == 'guides.php') echo 'active'; ?>">Teacher</a>
-                            <a href="testimonial.php" class="dropdown-item <?php if ($current_page == 'testimonial.php') echo 'active'; ?>">Testimonial</a>
-                            <a href="04.php" class="dropdown-item <?php if ($current_page == '04.php') echo 'active'; ?>">404 Page</a>
                         </div>
                     </div>
                     
