@@ -1,5 +1,93 @@
 <?php include("./layout/header.php") ?>
-        <!-- Services Start -->
+            <!-- Carousel Start -->
+            <div class="carousel-header">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="img/home/indximg/image.png" class="img-fluid" alt="Image">
+                            <div class="carousel-caption">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">VOCATIONAL HIGH SCHOOL</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">Ayo Bergabung Sekarang!</h1>
+                                    <p class="mb-5 fs-5"> "Anak-anak STM adalah aset negara yang memiliki kemampuan untuk mengembangkan industri otomotif nasional. Berkaryalah dan berikan prestasi terbaikmu untuk bangsa ini."</p>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/home/image.png" class="img-fluid" alt="Image">
+                            <div class="carousel-caption">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">VOCATIONAL HIGH SCHOOL</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">SMK Canda bhirawa</h1>
+                                    <p class="mb-5 fs-5"> "Walaupun SMK Canda Bhirawa disterotipe atau dikenal dengan kenakalan, buktikan kalian juga bisa berprestasi dengan membawa harum nama sekolah dan bangsa!"</p>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/home/smk.jpg" class="img-fluid" alt="Image">
+                            <div class="carousel-caption">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">VOCATIONAL HIGH SCHOOL</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">Kamu Ingin Bergabung?</h1>
+                                    <p class="mb-5 fs-5">"Jangan pernah minder untuk menjadi anak SMK Canda Bhirawa. Solidaritas dan kesetiakawanan Kalian tidak perlu lagi diragukan. Banggalah dan berikan yang terbaik untuk orang tua buktikan bahwa kalian bisa berprestasi."</p>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="false"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                        <span class="carousel-control-next-icon btn bg-primary" aria-hidden="false"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Carousel End -->
+        
+        <!-- Navbar & Hero End -->
+
+       <?php
+include "koneksi.php";
+$query = "SELECT * FROM new_kepalasekolah";
+$sql = $koneksi->query($query);
+while ($c = $sql->fetch_array()) { ?>
+<div class="container-fluid about py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
+                    <img src="admin/new_kepalasekolah/<?php echo $c['foto']; ?>" class="img-fluid w-100 h-100" alt="Foto Kepala Sekolah">
+                </div>
+            </div>
+            <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
+                <h5 class="section-about-title pe-3">Kepala Sekolah SMK Canda Bhirawa</h5>
+                <h1 class="mb-4"><?= $c['nama'] ?> <span class="text-primary"><?= $c['gelar'] ?></span></h1>
+                <p class="mb-4"><?= $c['deskripsi1'] ?></p>
+                <p class="mb-4"><?= $c['deskripsi2'] ?></p>
+                <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>
+        
+<!-- Services Start -->
         <div class="container-fluid bg-light service py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
