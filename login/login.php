@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Ambil data user
-    $query = "SELECT * FROM users WHERE username = ?";
+    $query = "SELECT * FROM user WHERE username = ?";
     $stmt = $koneksi->prepare($query);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -29,11 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Redirect berdasarkan level
         switch ($user['level']) {
-            case 'guru':
+            case 'superadmin':
                 header("Location: ../admin/dasbord_guru.php");
                 break;
-            case 'murid':
-                header("Location: ../admin/absensi.php");
+            case 'admin':
+                header("Location: ../admin/dasboard_admin.php");
                 break;
             case 'wali_murid':
                 header("Location: ../admin/dasbord_wali.php");
@@ -62,8 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphism Login Form | CodingNepal</title>
+  <title>login now</title>
   <link rel="stylesheet" href="login.css">
+  <link href="cbpare.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 <body>
   <div class="wrapper">

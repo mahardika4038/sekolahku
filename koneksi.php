@@ -5,7 +5,7 @@ $password = "h6C4mbti3tACLkWk"; // Password database
 $database = "pkk"; // Nama database
 
 // Membuat koneksi
-$koneksi = new mysqli($host, $username, $password, $database);
+$koneksi = new mysqli("100.91.139.68", "pkk", "h6C4mbti3tACLkWk", "pkk");
 
 // Cek koneksi
 if ($koneksi->connect_error) {
