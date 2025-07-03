@@ -1,98 +1,50 @@
-/* File: css.admin/dashboard.css */
-
 body {
+    background-color: #f8f9fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 2rem;
-    color: #fff; /* teks jadi putih supaya kontras */
-
-    /* background image full screen */
-    background-image: url("guru.jpg"); /* sesuaikan path gambarnya */
-    background-size: cover;            /* supaya foto menutupi seluruh background */
-    background-position: center;       /* supaya foto di tengah */
-    background-repeat: no-repeat;      /* supaya foto tidak diulang */
-    background-attachment: fixed;      /* supaya background tidak scroll bersama isi */
-
-    position: relative;
-}
-
-/* Overlay gelap supaya teks jelas di atas background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* lapisan hitam transparan */
-    z-index: -1;
-}
-
-h2 {
-    color: #00529b;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #00529b;
-    padding-bottom: 0.5rem;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 2rem;
-}
-
-ul li {
-    margin-bottom: 1rem;
-}
-
-ul li a {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #007bff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-ul li a:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 2rem 0;
-}
-
-p {
-    font-size: 1.1rem;
-    color: #ddd;
-}
-/* Styling untuk logo di navbar */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* jarak antara gambar dan teks */
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: white; /* atau warna sesuai kebutuhan */
 }
 
 .navbar-brand img {
-    width: 50px;      /* sesuaikan ukuran lebar logo */
-    height: auto;     /* tinggi otomatis supaya proporsional */
+    height: 50px;
+    width: 50px;
     object-fit: contain;
-    border-radius: 8px; /* opsional, agar sudut gambar agak membulat */
 }
 
-.navbar-brand h1 {
+.navbar-brand span {
+    font-weight: bold;
     font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
-    color: #fff; /* warna teks */
+    color: white;
+}
+
+h2 {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+hr {
+    border-top: 2px solid #0d6efd;
+    width: 100px;
+}
+
+.alert-info {
+    font-size: 1rem;
+    background-color: #e2f0ff;
+    color: #084298;
+    border-left: 5px solid #0d6efd;
 }

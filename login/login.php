@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $result->fetch_assoc();
 
     if (!$user) {
-        echo "<script>alert('Username tidak ditemukan'); window.location.href='login.php';</script>";
+        echo "<script>alert('Username tidak ditemukan'); window.location.href='../404.php';</script>";
         exit;
     }
 
@@ -44,12 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: ../index2.php");
                 break;
             default:
-                echo "<script>alert('Level akses tidak dikenali'); window.location.href='404.html';</script>";
+                echo "<script>alert('Level akses tidak dikenali'); window.location.href='../404.php';</script>";
                 break;
         }
         exit;
     } else {
-        echo "<script>alert('Password salah'); window.location.href='login.php';</script>";
+        echo "<script>alert('Password salah'); window.location.href='../404.php';</script>";
         exit;
     }
 }
@@ -62,13 +62,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphism Login Form | CodingNepal</title>
+  <title>login now</title>
   <link rel="stylesheet" href="login.css">
+  <link href="cbpare.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 <body>
   <div class="wrapper">
     <form action="#" method="POST">
-      <h2><img src="bhirawa-removebg-preview.png" height="120px" width="120px"></h2>
+      <h2><img src="cbnyeni.png" height="120px" width="120px"></h2>
         <div class="input-field">
         <input type="text" name="username" required>
         <label>username </label>

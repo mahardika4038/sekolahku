@@ -577,5 +577,63 @@ while ($c = $sql->fetch_array()) { ?>
         </div>
     </div>
 </div>
+<!-- Blog Start -->
+       <div class="container-fluid blog py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">News</h5>
+            <h1 class="mb-4">Popular News</h1>
+            <p class="mb-0">Berita-berita terupdate dari Candabhirawa.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <?php
+            include "koneksi.php";
+            $query = "SELECT * FROM news";
+            $sql = $koneksi->query($query);
+            while ($c = $sql->fetch_array()) { ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-item h-100">
+                        <div class="blog-img">
+                            <div class="blog-img-inner position-relative">
+                                <img class="img-fluid w-100 rounded-top" src="admin/foto_berita/<?php echo $c['foto_berita']; ?>" alt="Image" style="height: 250px; object-fit: cover;">
+                                <div class="blog-icon position-absolute top-50 start-50 translate-middle">
+                                    <a href="detail_berita.php?id=<?php echo $c['id']; ?>" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content border border-top-0 rounded-bottom p-4">
+                            <a class="h4 d-block mb-2"><?php echo $c['judul']; ?></a>
+                            <p class="my-3 sinopsis-short"><?php echo substr($c['sinopsis'], 0, 100); ?>...</p>
+                            <p class="my-3 sinopsis-full d-none"><?php echo nl2br($c['sinopsis']); ?></p>
+                            <a href="detail_berita.php?id=<?php echo $c['id']; ?>" class="btn btn-primary rounded-pill py-2 px-4 btn-toggle">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS Toggle Sinopsis -->
+<script>
+document.querySelectorAll('.btn-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const content = btn.closest('.blog-content');
+        const shortText = content.querySelector('.sinopsis-short');
+        const fullText = content.querySelector('.sinopsis-full');
+
+        // Toggle visibilitas
+        shortText.classList.toggle('d-none');
+        fullText.classList.toggle('d-none');
+
+        // Ganti teks tombol
+        btn.textContent = btn.textContent === 'Read More' ? 'Tampilkan Ringkasan' : 'Read More';
+    });
+});
+</script>
 
 <?php include("./layout/footer.php") ?>

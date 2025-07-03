@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     $home_link = "index.php";
 } else {
-    $home_link = "index2.php";
+    $home_link = "index.php";
 }
 
 $current_page = basename($_SERVER['PHP_SELF']);
@@ -77,16 +77,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="<?= $home_link ?>" class="navbar-brand p-0">
                 <img src="./img/cb/logocb.png" alt="Logo CB" style="height: 60px; width: auto; margin-right: 10px;">
-                <h2 class="m-0 d-none d-lg-inline">
-                    SMK Canda Bhirawa
-                </h2>
+                <h2 class="m-0 d-none d-lg-inline" style="color: white;">SMK Canda Bhirawa</h2>
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="<?= $home_link ?>" class="nav-item nav-link <?php if ($current_page == 'index.php' || $current_page == 'index2.php') echo 'active'; ?>">Home</a>
+                    <a href="<?= $home_link ?>" class="nav-item nav-link <?php if ($current_page == 'index.php' || $current_page == 'index.php') echo 'active'; ?>">Home</a>
                     
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle <?php if (in_array($current_page, ['./ppdb/pengumuman.php', './ppdb/jadwal.php', './ppdb/alur_pendaftaran.php', './ppdb/syarat_pendaftaran.php', 'testimonial.php', '04.php'])) echo 'active'; ?>" data-bs-toggle="dropdown">PPDB</a>
