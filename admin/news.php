@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "../koneksi.php";
 
 // Tambah berita
 if (isset($_POST['simpan'])) {

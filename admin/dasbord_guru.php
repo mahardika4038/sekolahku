@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'koneksi.php';
+include "../koneksi.php";
 
 // Cek apakah pengguna sudah login dan merupakan guru
 if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'guru') {
@@ -25,7 +25,7 @@ $action = $_GET['action'] ?? '';
 </a>
     <h2>Menu Data</h2>
     <ul>
-        <li><a href="?action=absensi">Kelola Absensi</a></li>
+        <li><a href="kepseknew.php">Kelola Absensi</a></li>
         <li><a href="kepsek.php">Upload Kepala Sekolah</a></li>
         <li><a href="news.php">Upload Berita</a></li>
     </ul>
