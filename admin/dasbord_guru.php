@@ -57,7 +57,7 @@ $action = $_GET['action'] ?? '';
     </a>
     <div class="ms-auto">
         <span class="text-white me-3">👤 <?= $_SESSION['username']; ?> (<?= $_SESSION['level']; ?>)</span>
-        <a href="../login/logout.php" class="btn btn-outline-light">Logout</a>
+        <a href="../index.php" class="btn btn-outline-light">Logout</a>
     </div>
 </nav>
 
